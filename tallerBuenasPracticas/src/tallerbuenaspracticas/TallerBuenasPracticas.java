@@ -16,7 +16,7 @@ public class TallerBuenasPracticas {
      */
     public static void main(String[] args) {
         
-        System.out.println("hola mundo prueba 3");
+        System.out.println("hola mundo 5");
         
     }
     
