@@ -15,9 +15,9 @@ public class TallerBuenasPracticas {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        System.out.println("hola mundo 6");
-        
+
+        System.out.println("Vamos a empezar el proyecto 1");
+
     }
-    
+
 }
