@@ -7,7 +7,7 @@ package tallerbuenaspracticas;
 
 /**
  *
- * @author yohapimo
+ * @author Yon Hawer Piñeros
  */
 public class TallerBuenasPracticas {
 
@@ -16,8 +16,10 @@ public class TallerBuenasPracticas {
      */
     public static void main(String[] args) {
 
-        System.out.println("Hola mundo");
+        PlayList1 objPlayList1 = new PlayList1(1, "cTituloCancion1", "ageneroCancion1", "Noviembre 10", 8.2, "caratula 1", " adescripcion1");
 
+        objPlayList1.crearList();
+        
     }
 
 }
