@@ -12,21 +12,21 @@ package tallerbuenaspracticas;
 public class PlayList implements Comparable<PlayList> {
 
     public int id;
-    public String titulo;
-    public String genero;
-    public String fecha;
-    public double duracion;
-    public String caratula;
-    public String descripcion;
+    public String title;
+    public String genre;
+    public String date;
+    public double duration;
+    public String cover;
+    public String description;
 
-    public PlayList(int id, String titulo, String genero, String fecha, double duracion, String caratula, String descripcion) {
+    public PlayList(int id, String title, String genre, String date, double duration, String cover, String description) {
         this.id = id;
-        this.titulo = titulo;
-        this.genero = genero;
-        this.fecha = fecha;
-        this.duracion = duracion;
-        this.caratula = caratula;
-        this.descripcion = descripcion;
+        this.title = title;
+        this.genre = genre;
+        this.date = date;
+        this.duration = duration;
+        this.cover = cover;
+        this.description = description;
     }
 
     public int getId() {
@@ -37,65 +37,62 @@ public class PlayList implements Comparable<PlayList> {
         this.id = id;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getGenero() {
-        return genero;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGenero(String genero) {
-        this.genero = genero;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 
-    public String getFecha() {
-        return fecha;
+    public String getDate() {
+        return date;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public double getDuracion() {
-        return duracion;
+    public double getDuration() {
+        return duration;
     }
 
-    public void setDuracion(double duracion) {
-        this.duracion = duracion;
+    public void setDuration(double duration) {
+        this.duration = duration;
     }
 
-    public String getCaratula() {
-        return caratula;
+    public String getCover() {
+        return cover;
     }
 
-    public void setCaratula(String caratula) {
-        this.caratula = caratula;
+    public void setCover(String cover) {
+        this.cover = cover;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    /*
-    Metodo to string
-     */
     @Override
     public String toString() {
-        return "PlayList{" + "id" + id + ", titulo=" + titulo + ", genero=" + genero + ", fecha=" + fecha + ", duracion=" + duracion + ", caratula=" + caratula + ", descripcion=" + descripcion + '}' + "\n";
+        return "PlayList {" + id + "= title: " + title + "|| genre:" + genre + "|| date :" + date + "|| duration :" + duration + " Min || cover :" + cover + "|| description :" + description + '}' + "\n                                                                                                   ";
     }
 
     @Override
     public int compareTo(PlayList t) {
-        return fecha.compareTo(t.getFecha());
+        return date.compareTo(t.getDate());
 
     }
 

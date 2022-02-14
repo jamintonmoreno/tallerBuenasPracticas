@@ -7,6 +7,8 @@ package tallerbuenaspracticas;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -14,27 +16,41 @@ import java.util.Collections;
  */
 public class PlayList1 extends PlayList {
 
-    public PlayList1(int id, String titulo, String genero, String fecha, double duracion, String caratula, String descripcion) {
-        super(id, titulo, genero, fecha, duracion, caratula, descripcion);
+    Scanner sc = new Scanner(System.in);
+
+    public PlayList1(int id, String title, String genre, String date, double duration, String cover, String description) {
+        super(id, title, genre, date, duration, cover, description);
     }
 
-    public void crearList() {
+    public void createList() {
 
-        PlayList play1 = new PlayList(1, "cTituloCancion1", "ageneroCancion1", "Noviembre 10", 8.2, "caratula 1", " adescripcion1");
-        PlayList play2 = new PlayList(2, "aTituloCancion2", "bgeneroCancion2", "Febrero 2", 5, "caratula 2", " bdescripcion2");
-        PlayList play3 = new PlayList(3, "bTituloCancion3", "cgeneroCancion3", "Junio 25 1", 7.5, "caratula 3", " cdescripcion3");
+        PlayList play1 = new PlayList(1, "Matador ", " Rock en Español ", " Junio-1993 ", 5.2, " Caratula 1 ", " Canción de Los Fabulosos Cadillacs");
+        PlayList play2 = new PlayList(2, "De Música Ligera ", "Rock en Español ", "Diciembre-1990 ", 6.3, " caratula 2 ", " Canción de Soda Stereo");
+        PlayList play3 = new PlayList(3, "Clandestino ", " Rock en Español ", " Agosto-1998 ", 7.5, " Caratula 3 ", "Canción de Manu Chao");
+        PlayList play4 = new PlayList(4, "Entre Dos Tierras", " Rock en Español ", " Abril-1990 ", 5.5, "Caratula 4", " Canción de Héroes del silencio");
+        PlayList play5 = new PlayList(5, "Gimme tha Power ", " Rock en Español ", " Enero-1997 ", 6.8, "Caratula 5", " Csnción de Molotov");
 
-        ArrayList<PlayList> playlistas = new ArrayList<PlayList>();
+        List<PlayList> playlistas = new ArrayList<PlayList>();
 
         playlistas.add(play1);
         playlistas.add(play2);
         playlistas.add(play3);
+        playlistas.add(play4);
+        playlistas.add(play5);
 
-        Collections.sort(playlistas);  // ascendente
-        Collections.sort(playlistas, Collections.reverseOrder());  // Descendente
+        System.out.print("Puedes ordenar la Play List de Rock en español por Fecha: "
+                + "\nIngrese 1 para ordenar ascendente! "
+                + "\nIngrese 2 para descendente "
+                + "\nIngrese 1 o 2 : ");
+        int numero = Integer.parseInt(sc.nextLine());
+        if (numero == 1) {
+            Collections.sort(playlistas);
+        } else {
+            Collections.sort(playlistas, Collections.reverseOrder());
+        }
 
-        for (PlayList elemento : playlistas) {
-            System.out.println(elemento);
+        for (PlayList element : playlistas) {
+            System.out.println(element);
 
         }
 
