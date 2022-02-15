@@ -6,8 +6,16 @@
 package tallerbuenaspracticas;
 
 /**
+ * PlayList.
  *
- * @author Yon Hawer Piñeros
+ * Representa la clase abstracta en la cual creamos el método constructor y los
+ * métodos de obtener y cambiar.
+ *
+ * @version 01.01.01 2022-02-14
+ *
+ * @author Yon Hawer Piñeros - yon.pineros@gmail.com
+ *
+ * @since Clase presente desde la versión 01
  */
 public class PlayList implements Comparable<PlayList> {
 
@@ -85,11 +93,22 @@ public class PlayList implements Comparable<PlayList> {
         this.description = description;
     }
 
+    /**
+     * Crear método ToString para poder retornar datos del ArrayList.
+     *
+     * @return Datos de los atributos del ArrayList.
+     */
     @Override
     public String toString() {
         return "PlayList {" + id + "= title: " + title + "|| genre:" + genre + "|| date :" + date + "|| duration :" + duration + " Min || cover :" + cover + "|| description :" + description + '}' + "\n                                                                                                   ";
     }
 
+    /**
+     * Crear método para ordenar la lista en el orden que se quiera.
+     *
+     * @param t
+     * @return Date en forma Ascendente o Descendente.
+     */
     @Override
     public int compareTo(PlayList t) {
         return date.compareTo(t.getDate());

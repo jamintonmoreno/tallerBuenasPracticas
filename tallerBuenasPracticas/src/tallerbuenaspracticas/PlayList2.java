@@ -8,20 +8,40 @@ package tallerbuenaspracticas;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
 
 /**
+ * PlayList 2.
  *
- * @author yohapimo
+ * Representa la clase PlayList 2 que hereda los atributos de la clase abstracta
+ * PlayList y así poder realizar la manipulación de los datos.
+ *
+ * @version 01.01.01 2022-02-14
+ *
+ * @author Yon Hawer Piñeros - yon.pineros@gmail.com
+ *
+ * @since Clase presente desde la versión 01
  */
 public class PlayList2 extends PlayList {
 
-    Scanner sc = new Scanner(System.in);
-
+    /**
+     * PlayList 2.
+     *
+     * @param id
+     * @param title
+     * @param genre
+     * @param date
+     * @param duration
+     * @param cover
+     * @param description
+     */
     public PlayList2(int id, String title, String genre, String date, double duration, String cover, String description) {
         super(id, title, genre, date, duration, cover, description);
     }
 
+    /**
+     * Metodo con un ArrayList para crear la PlayList 2, donde se ingresan 5
+     * canciones.
+     */
     public void createList() {
 
         PlayList play1 = new PlayList(1, "Periódico de Ayer ", " Salsa ", " Septiembre-1976 ", 8.2, " caratula 1 ", " Canción de Héctor lavoe");
@@ -38,9 +58,16 @@ public class PlayList2 extends PlayList {
         playlistas.add(play4);
         playlistas.add(play5);
 
+        /**
+         * Método sort para poder ordenar la lista de forma ascendento o
+         * descendente.
+         */
         Collections.sort(playlistas);  // ascendente
         //Collections.sort(playlistas, Collections.reverseOrder());  // Descendente
 
+        /**
+         * Bucle foreach con el cual podemos recorrer la colección PlayList.
+         */
         for (PlayList element : playlistas) {
             System.out.println(element);
 
