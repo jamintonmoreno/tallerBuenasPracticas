@@ -73,6 +73,16 @@ public class PlayList3 extends PlayList {
 
         }
 
+        /**
+         * Bucle foreach con el cual podemos obtener los titulos y las fechas de
+         * los PlayList.
+         */
+        System.out.println("Filtro de canciones por Titulo y Fecha.");
+        for (PlayList elemento : playlistas) {
+
+            System.out.println(elemento.getTitle() + "-" + elemento.getDate());
+        }
+
     }
 
 }

@@ -58,6 +58,8 @@ public class TallerBuenasPracticas {
             System.out.println(objPlayList1);
             System.out.println("Play List Música 'ROCK EN ESPAÑOL' !!!");
             objPlayList1.createList();
+
+            System.out.println(objPlayList1.getGenre());
         } catch (Exception e) {
             System.out.println("Ingresar un valor valido!");
         }
@@ -70,12 +72,14 @@ public class TallerBuenasPracticas {
         PlayList2 objPlayList2 = new PlayList2(0, "Titulo 2", "Genero 2", "Fecha 2", 8.2, "caratula 2", "Descripción 2");
         System.out.println("Play List Música 'SALSA' !!!");
         objPlayList2.createList();
+        System.out.println(objPlayList2.getTitle());
 
         System.out.println("\n");
 //
         PlayList3 objPlayList3 = new PlayList3(0, "Titulo 3", "Genero 3", "Fecha 3", 8.2, "caratula 3", " Descripción 3");
         System.out.println("Play List Música 'ROMANTICA' !!!");
         objPlayList3.createList();
+        System.out.println(objPlayList3.getTitle());
 
         System.out.println("\n");
 
